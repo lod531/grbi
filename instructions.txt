@@ -1,0 +1,11 @@
+Extract the tar, note the location of the /linux64 directory in the extracted
+gurobi810 folder, that's Your GUROBI_HOME dir. Then add this to .bashrc
+
+export GUROBI_HOME="/home/tryahrd/grbi/gurobi810/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+
+then establish a connection to a college network via whatever vpn
+(the one in the .sh sets up for ethz for ubuntu 16), run grbgetkey
+from the license file, and then cd to home and look for setup.py
+setup.py build is the command, and You should be done.
